@@ -1,0 +1,287 @@
+RewriteEngine On
+
+RewriteCond %{SERVER_PORT} ^443$ [OR]
+RewriteCond %{HTTPS} =on
+RewriteRule ^(.*)$ http://laguna-pools.ru/$1 [R=301,L]
+RewriteRule ^index.php$ / [R]
+RewriteRule ^/$ index.php [L]
+
+# сжатие text, html, javascript, css, xml:
+<ifModule mod_deflate.c>
+AddOutputFilterByType DEFLATE text/html text/plain text/xml application/xml application/xhtml+xml text/css text/javascript application/javascript application/x-javascript
+</ifModule>
+
+#новый сайт
+RewriteRule ^about-company/$ css/2020/templeate/about-compan.php [L]
+
+
+
+#новый сайт 
+
+#Бассейн контейнер
+RewriteRule ^container-swimming-pool/$ container-swimming-pool.php [L]
+
+#О компании
+RewriteRule ^about-company/$ about-company.php [L]
+
+#Аквадизайн
+RewriteRule ^aqua/$ waterfalls.php [L]
+
+#Для SPA салонов
+RewriteRule ^spa/$ floating.php [L]
+
+#Оборудование
+RewriteRule ^equipment/$ laguna-pool-filters.php [L]
+
+#Материалы
+RewriteRule ^materials/$ pvc-liner.php [L]
+
+#Architecture
+RewriteRule ^architecture/$ architecture.php [L]
+
+#Eco Finish
+RewriteRule ^eco-finish/$ eco-finish.php [L]
+
+#Pebble Pro
+RewriteRule ^pebble-pro/$ pebble-pro.php [L]
+
+#SPA душь
+RewriteRule ^wow-shower/$ wow-shower.php [L]
+
+#Снежня комнота
+RewriteRule ^snow-room/$ snow-room.php [L]
+
+#Снегогенератор
+RewriteRule ^snow-generator/$ snow-generator.php [L]
+
+#Льдогенератор
+RewriteRule ^ice-maker-spa/$ ice-maker-spa.php [L]
+
+RewriteRule ^chat/$ livechat/php/app.php?admin [L]
+
+RewriteRule ^about/$ about.php [L]
+RewriteRule ^about/quality/$ quality.php [L]
+RewriteRule ^about/quality$ quality.php [L]
+
+RewriteRule ^shop/$ shop-promo-main.php [L]
+RewriteRule ^how/$ how.php [L]
+RewriteRule ^contacts/$ contacts.php [L]
+RewriteRule ^salesgeography/$ salesgeography.php [L]
+
+RewriteRule ^pools/$ shop.php [L]
+
+
+#стеклянные бассейны
+RewriteRule  ^glass-pools/$  glass-pools.php [L]
+
+#кислородные камеры oxygen chambers
+RewriteRule  ^oxygen-chambers/$  oxygen-chambers.php [L]
+
+#генератов снега snow generator
+RewriteRule  ^snow-generator/$  snow-generator.php [L]
+
+#снежная комнота snow room
+RewriteRule  ^snow-room/$  snow-room.php [L]
+
+#генератор льда ice maker-spa
+RewriteRule  ^ice-maker-spa/$  ice-maker-spa.php [L]
+
+#сборнные хаммамы steam hammams
+RewriteRule  ^steam-hammams/$  steam-hammams.php [L]
+
+#пленка pvc liner
+RewriteRule  ^pvc-liner/$ pvc-liner.php [L]
+
+#плитка pool tiles
+RewriteRule  ^pool-tiles/$  pool-tiles.php [L]
+
+#мозайка mosaic for the pool
+RewriteRule  ^mosaic-for-the-pool/$  mosaic-for-the-pool.php [L]
+
+#горки для аквапарка water park slides
+RewriteRule  ^water-park-slides/$  water-park-slides.php [L]
+
+#серфинг бассейны surf pools
+RewriteRule  ^surf-pools/$  surf-pools.php [L]
+
+#снеговые дорожки snow tracks
+RewriteRule  ^snow-tracks/$  snow-tracks.php [L]
+
+#Природные бассейны
+RewriteRule  ^biodesign-pools-italy/$  biodesign-pools-italy.php [L]
+
+#Облицовка Биодизайн
+RewriteRule  ^biodesign-pools/$  biodesign-pools.php [L]
+
+#Сборные панельный 
+RewriteRule  ^panel-pools/$  panel-pools.php [L]
+
+#Бассейны биг спирит 
+RewriteRule  ^swimming-pool-with-metal-frame/$  swimming-pool-with-metal-frame.php [L]
+
+#Фонтаны
+RewriteRule  ^fountain/$  fountain.php [L]
+
+
+#Фонтаны
+RewriteRule  ^fountain/$  fountain.php [L]
+
+#Водопады
+RewriteRule  ^waterfalls/$  waterfalls.php [L]
+
+#Струнный водопад
+RewriteRule  ^cwaterfalls-string/$  waterfalls-string.php [L]
+
+#Левитация капель
+RewriteRule  ^waterfalls-levitating-water-droplets/$  waterfalls-levitating-water-droplets.php [L]
+
+#Пузырьковые панели
+RewriteRule  ^bubble-panels/$  bubble-panels.php [L]
+
+#Торнадо
+RewriteRule  ^tornado/$  tornado.php [L]
+
+#t-slot
+RewriteRule  ^covers/t-slot/$  covers-t-slot.php [L]
+
+#надувной павильон
+RewriteRule  ^covers/aero/$  covers-aero.php [L]
+
+#Фонтан
+RewriteRule  ^fountain/$  fountain.php [L]
+
+#Водопады
+RewriteRule  ^waterfalls/$  waterfalls.php [L]
+
+#Струнный водопад
+RewriteRule  ^waterfalls-string/$  waterfalls-string.php [L]
+
+#Пузырьковые панели
+RewriteRule  ^bubble-panels/$  bubble-panels.php [L]
+
+#Торнадо
+RewriteRule  ^bubble-panels-tornado/$  bubble-panels-tornado.php [L]
+
+
+#насосы
+RewriteRule  ^swimming-pool-pumps/$  swimming-pool-pumps.php [L]
+
+#Термоодеяло
+RewriteRule  ^thermal-blanket-cover/$  thermal-blanket-cover.php [L]
+
+#солярная пленка
+RewriteRule  ^pr-solyarnaya-plenka/$  pr-solyarnaya-plenka.php [L]
+
+#робот
+RewriteRule  ^swimming-robot-pool-cleaner/$  swimming-robot-pool-cleaner.php [L]
+
+#фильтр
+RewriteRule  ^pool-filters/$  laguna-pool-filters.php [L]
+
+#файйбер болл
+RewriteRule  ^pool-filler/$  laguna-fiber-filler.php [L]
+
+#ограждение из стекла
+RewriteRule  ^fence-for-pool-glass/$  fence-for-pool-glass.php [L]
+
+#CONTACTS DILER
+RewriteRule  ^dilers/$  dilers.php [L]
+
+#PORTFOLIO
+RewriteRule  ^portfolio/$  g.php [L]
+
+# Модульные
+RewriteRule  ^module/$  module.php [L]
+
+# Индивидуальные 
+RewriteRule  ^individual/$  framework.php [L]
+
+# Карта сайта
+RewriteRule ^laguna-spa-sauna/$ laguna-spa-sauna.php  [L]
+
+
+# Флоаткамера
+RewriteRule ^floating/$ floating.php  [L]
+
+# Химия
+RewriteRule ^chemicals/$ chemicals.php  [L]
+
+# Сборные бассейны
+RewriteRule ^start-pool/$ shop-promo-main.php  [L]
+
+# Станция дозирования Laguna Aqua
+RewriteRule ^laguna-aqua/$ laguna-aqua.php  [L]
+
+# Ремонт оборудования 
+RewriteRule ^repair/spa/$ repairspa.php  [L]
+
+# Строительство общественных бассейнов
+RewriteRule ^swimming-pool/$ swimming-pool.php  [L] 
+
+# Раздел полипропиленовые бассейны
+RewriteRule ^polypropylene-pools/$ polypropylene-pools.php [L] 
+
+# Раздел бордюрный камень coping.php
+RewriteRule ^coping/$ coping.php [L] 
+
+# Раздел Laguna Box
+RewriteRule ^laguna-box/$ laguna-box.php [L] 
+RewriteRule ^pool-box/$ laguna-box.php [L] 
+
+# Раздел павильоны
+RewriteRule ^covers/$ covers.php [L]
+RewriteRule ^covers/sliding-pavilions/$ sliding-pavilions.php [L] 
+RewriteRule ^covers/stationary-pavilions/$ stationary-pavilions.php [L] 
+
+RewriteRule ^covers/platform-automatic/$ platform-automatic.php [L] 
+RewriteRule ^covers/automatic/$ covers.php [L] 
+RewriteRule ^covers/semi-automatic/$ semi-automatic.php [L] 
+RewriteRule ^covers/sliding-platform/$ sliding-platform.php [L] 
+RewriteRule ^covers/manual/$ manual.php [L] 
+RewriteRule ^covers/tent/$ tent.php [L] 
+RewriteRule ^covers/lock/$ covers-lock.php [L] 
+RewriteRule ^covers/roll/$ covers-roll.php [L] 
+
+
+# Раздел павильоны - Ограждения
+RewriteRule ^covers/fence-for-pool/$ fence-for-pool.php
+RewriteRule ^covers/fence-for-pool-glass/$ fence-for-pool-glass.php
+RewriteRule ^covers/blanket-for-the-pool/$ cover-mesh.php
+
+# Проектирование
+RewriteRule ^swimming-pool-design/$ swimming-pool-design.php [L]
+
+# Ремонт композитных бассейнов
+RewriteRule ^repair/fibreglass/$ repair.php [L]
+
+# Изделия из стеклопластика 
+
+RewriteRule ^sauna/$ 404.php [L]
+RewriteRule ^infrared-sauna/$ 404.php [L]
+RewriteRule ^hamams/$ 404.php [L]
+
+RewriteRule ^laguna-pools-box/$ model-pools.php [L]
+RewriteRule ^laguna-pools-1/$ model-pools.php [L]
+RewriteRule ^laguna-pools-2/$ model-pools.php [L]
+RewriteRule ^laguna-pools-3/$ model-pools.php [L]
+RewriteRule ^laguna-pools-4/$ model-pools.php [L]
+RewriteRule ^laguna-pools-4/$ model-pools.php [L]
+RewriteRule ^laguna-pools-5/$ model-pools.php [L]
+RewriteRule ^laguna-pools-6/$ model-pools.php [L]
+RewriteRule ^laguna-pools-7/$ model-pools.php [L]
+RewriteRule ^laguna-pools-8/$ model-pools.php [L]
+RewriteRule ^laguna-pools-9/$ model-pools.php [L]
+RewriteRule ^laguna-pools-10/$ model-pools.php [L]
+RewriteRule ^laguna-pools-11/$ model-pools.php [L]
+RewriteRule ^laguna-pools-12/$ model-pools.php [L]
+
+# reg.php
+RewriteRule ^yandex_.*\.html$ /yandex.php [L]
+RewriteRule ^sitemap.xml$ /sitemap.php [L]
+RewriteRule ^robots.txt$ /robots.php [L]
+RewriteRule ^turbo.xml$ /turbo.php [L]
+RewriteRule ^turbo-sandbox-preview$ /turbo.php [L]
+
+# 404
+ErrorDocument 404 /404.php
+
