@@ -1,0 +1,32 @@
+// получаю данные для url
+$sql = "SELECT * FROM `reg` WHERE `reg_url_base64` LIKE '".$idurl."'";
+$result_sql = mysqli_query($link, $sql);
+
+// формирвание переменных
+
+while($row = mysqli_fetch_array($result_sql))
+{  
+    $id = $row['id']; 
+    $reg_sity_0 = $row['reg_sity_0']; 	
+    $reg_sity_1 = $row['reg_sity_1']; 
+    $reg_sity_2 = $row['reg_sity_2']; 
+    $reg_sity_3 = $row['reg_sity_3']; 
+    $reg_sity_4 = $row['reg_sity_4']; 
+    $reg_sity_5 = $row['reg_sity_5']; 
+    $reg_region = $row['reg_region'];  
+    $reg_url = $row['reg_url'];   
+    $reg_gprs_0 = $row['reg_gprs_0']; 
+    $reg_gprs_1 = $row['reg_gprs_1'];    
+    $reg_url_rf_0 = $row['reg_url_rf_0'];   	
+    $reg_url_rf_1 = $row['reg_url_rf_1'];   
+    $reg_url_base64 = $row['reg_url_base64'];   
+    $dop1 = $row['dop1'];   	 
+    $dop2 = $row['dop2'];   	
+    $dop3 = $row['dop3'];   	
+    $dop4 = $row['dop4'];	
+    $dop5 = $row['dop5'];  	
+    $dop6 = $row['dop6']; 	
+                      
+}
+
+echo "<!-- debug 2 ---: ".$reg_region." / ". $reg_sity_0." / ".$reg_url." -->";
