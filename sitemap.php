@@ -1,7 +1,7 @@
 <?php 
 header( "Content-Type: text/xml; charset=utf-8" );
 echo '<?xml version="1.0" encoding="UTF-8"?>' ;
-$date = date('Y-m-dTH:i:sP', time());
+$date = date("Y-m-d"); 
 ?>
 <?php echo '<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">'; ?>
 <?php echo "\n" ?>
@@ -14,9 +14,9 @@ $date = date('Y-m-dTH:i:sP', time());
 // получаю данные для page
  
 $sdd_db_host='localhost'; // ваш хост
-$sdd_db_name=''; // ваша бд
-$sdd_db_user=''; // пользователь бд
-$sdd_db_pass='____'; // пароль к бд
+$sdd_db_name='rnc'; // ваша бд
+$sdd_db_user='rnc'; // пользователь бд
+$sdd_db_pass=' '; // пароль к бд
 
 $conn = mysql_connect($sdd_db_host,$sdd_db_user,$sdd_db_pass); // коннект с сервером бд
 
